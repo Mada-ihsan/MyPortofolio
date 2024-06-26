@@ -16,6 +16,10 @@ html {
     font-size: 60%;
     overflow-x: hidden;
 }
+.body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
 .header {
     position: fixed;
     width: 100%;
@@ -31,11 +35,11 @@ html {
 }
 #menu-icon {
     font-size: 3.5rem;
-    color: var(--text-color);
+    color: var(--main-color);
     display: none;
 }
 .logo {
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: var(--text-color);
     font-weight: 800;
     cursor: pointer;
@@ -48,7 +52,7 @@ span {
     background: linear-gradient(
         270deg,
         #DF8908 10%,
-        #ff1d15
+        #ff1d15 100%
     );
     background-clip: text;
     color: transparent;
@@ -63,7 +67,7 @@ span {
 }
 .navbar a:hover{
     color: var(--main-color);
-    border-bottom: 3px solid --main-color;
+    border-bottom: 3px solid var(--main-color);
 }
 .gradient-btn{
     font-size: 1.8rem;
@@ -72,7 +76,7 @@ span {
     background: linear-gradient(
         270deg,
         #DF8908 10%,
-        #ff1d15
+        #ff1d15 100%
     );
     letter-spacing: 1px;
     cursor: pointer;
@@ -86,7 +90,7 @@ span {
 }
 
 section{
-    min-height: 10vh;
+    min-height: 100vh;
     padding: 10rem 15%;
 }
 .home{
@@ -96,14 +100,14 @@ section{
     gap: 15rem;
 }
 .home-content{
-    display: 8rem;
+    display: flex;
     flex-direction: column;
     align-items: flex-end;
     text-align: right;
 }
 .home-content h1{
     font-size: 8rem;
-    font-weight: 700;
+    font-weight: 300;
     margin-top: 1.5rem;
     line-height: 1;
 }
@@ -326,7 +330,7 @@ section{
     margin-bottom: 3rem;
     color: var(--text-color);
 }
-.contact from{
+.contact form{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -344,6 +348,7 @@ section{
     border-radius: 2rem;
     border: 2px solid var(--main-color);
     margin: 1.5rem 0;
+    resize: none;
 }
 .footer{
     background-color: var(--second-bg-color);
@@ -384,15 +389,16 @@ section{
         right: 0;
         width: 50%;
         padding: 1rem 3rem;
-        background: rgba(0, 0, 0, 0);
+        background: rgba(0, 0, 0, 0.8);
         border-bottom-left-radius: 2rem;
         border-left: 2px solid var(--main-color);
         border-bottom: 2px solid var(--main-color);
+        display: none;
     }
     .navbar a{
         display: block;
         font-size: 2rem;
-        margin:  3rem 0;
+        margin: 3rem 0;
         color: var(--text-color);
     }
     .navbar.active{
